@@ -12,7 +12,11 @@
         <a class="header__link" href="#">О нас</a>
       </nav>
 
-      <button class="header__burger" type="button" aria-label="Открыть меню" />
+      <button class="header__burger" type="button" aria-label="Открыть меню">
+        <span class="header__burger-line" />
+        <span class="header__burger-line" />
+        <span class="header__burger-line" />
+      </button>
     </div>
   </header>
 </template>
