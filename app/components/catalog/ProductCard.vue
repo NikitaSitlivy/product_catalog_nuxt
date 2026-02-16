@@ -17,7 +17,7 @@
     <div class="product-card__content">
       <div class="product-card__prices">
         <span class="product-card__price">{{ formatPrice(product.price) }}</span>
-        <span class="product-card__price-half">{{ formatHalfPrice(halfPrice) }} × 2</span>
+        <span class="product-card__price-half">{{ formatPrice(halfPrice) }} × 2</span>
       </div>
 
       <h3 class="product-card__title">{{ product.name }}</h3>
@@ -37,5 +37,4 @@ const isImageLoaded = ref(false)
 const halfPrice = computed(() => Math.ceil(props.product.price / 2))
 
 const formatPrice = (value: number) => `${new Intl.NumberFormat('ru-RU').format(value)} ₽`
-const formatHalfPrice = (value: number) => `${new Intl.NumberFormat('ru-RU').format(value)} ₽`
 </script>
