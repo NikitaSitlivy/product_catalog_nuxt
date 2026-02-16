@@ -1,0 +1,380 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;700&display=swap');
+
+$color-black: #000000;
+$color-white: #ffffff;
+$color-grey-100: #f5f5f5;
+$color-grey-500: #6f6f6f;
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#__nuxt {
+  margin: 0;
+  min-height: 100%;
+  padding: 0;
+}
+
+body {
+  background: $color-white;
+  color: $color-black;
+  font-family: 'Golos Text', 'Segoe UI', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 0 60px;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  &__main {
+    flex: 1;
+  }
+}
+
+.header {
+  background: $color-white;
+
+  &__container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    min-height: 82px;
+  }
+
+  &__logo {
+    background: #ff0000;
+    display: block;
+    flex: 0 0 auto;
+    height: 42px;
+    width: 42px;
+  }
+
+  &__nav {
+    align-items: center;
+    backdrop-filter: blur(50px);
+    background: $color-grey-100;
+    display: flex;
+    gap: 40px;
+    padding: 10px 24px;
+  }
+
+  &__link {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  &__burger {
+    background: $color-white;
+    border: 0;
+    cursor: default;
+    height: 42px;
+    padding: 0;
+    width: 42px;
+  }
+}
+
+.hero {
+  padding: 88px 0;
+
+  &__container {
+    border: 1px solid #d9d9d9;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 44px;
+  }
+
+  &__eyebrow {
+    font-size: 14px;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    font-size: clamp(30px, 4vw, 48px);
+    line-height: 1.05;
+    margin: 0;
+    max-width: 760px;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0;
+    max-width: 600px;
+  }
+
+  &__button {
+    align-self: flex-start;
+    border: 1px solid $color-black;
+    display: inline-flex;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 14px 28px;
+  }
+}
+
+.catalog-page {
+  padding: 100px 0 110px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 110px;
+  }
+
+  &__title {
+    font-size: 42px;
+    font-weight: 500;
+    line-height: 1.1;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__grid {
+    display: grid;
+    gap: 40px 0;
+    grid-template-columns: repeat(4, minmax(0, 290px));
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    width: 290px;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+    margin-top: -34px;
+    min-height: 40px;
+  }
+
+  &__more,
+  &__retry {
+    background: transparent;
+    border: 1px solid $color-black;
+    color: $color-black;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 10px 24px;
+  }
+
+  &__loading {
+    font-size: 14px;
+    line-height: 20px;
+    margin: 10px 0 0;
+  }
+
+  &__error {
+    align-items: center;
+    border: 1px solid $color-black;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-top: -80px;
+    padding: 16px;
+  }
+
+  &__error-text {
+    margin: 0;
+  }
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
+  width: 290px;
+
+  &__image-wrap {
+    height: 180px;
+    position: relative;
+    width: 100%;
+  }
+
+  &__image {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  &__favorite {
+    color: $color-black;
+    font-size: 24px;
+    line-height: 1;
+    position: absolute;
+    right: 10px;
+    top: 8px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__prices {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+  }
+
+  &__price {
+    font-family: 'Arial Black', 'Golos Text', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  &__price-half {
+    background: $color-black;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.12);
+    color: $color-white;
+    display: inline-flex;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: -0.7px;
+    line-height: 1;
+    padding: 4px;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    margin: 0;
+  }
+}
+
+.footer {
+  background: $color-black;
+  padding: 100px 0;
+
+  &__container {
+    column-gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    row-gap: 59px;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  &__title {
+    color: $color-grey-500;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+
+  &__link {
+    color: $color-white;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 1280px) {
+  .container {
+    padding: 0 24px;
+  }
+
+  .catalog-page {
+    &__grid {
+      grid-template-columns: repeat(3, minmax(0, 290px));
+      justify-content: space-evenly;
+    }
+  }
+}
+
+@media (max-width: 980px) {
+  .header {
+    &__nav {
+      display: none;
+    }
+  }
+
+  .catalog-page {
+    padding: 70px 0 80px;
+
+    &__container {
+      gap: 70px;
+    }
+
+    &__title {
+      font-size: 34px;
+    }
+
+    &__grid {
+      grid-template-columns: repeat(2, minmax(0, 290px));
+    }
+  }
+
+  .footer {
+    padding: 72px 0;
+
+    &__container {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+}
+
+@media (max-width: 660px) {
+  .container {
+    padding: 0 14px;
+  }
+
+  .catalog-page {
+    &__grid {
+      grid-template-columns: 1fr;
+      justify-content: center;
+    }
+
+    &__item,
+    .product-card {
+      width: 100%;
+    }
+
+    &__actions {
+      margin-top: -10px;
+    }
+
+    &__error {
+      margin-top: -40px;
+      text-align: center;
+    }
+  }
+
+  .footer {
+    &__container {
+      grid-template-columns: 1fr;
+      row-gap: 30px;
+    }
+  }
+}
